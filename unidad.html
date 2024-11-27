@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Cloudlabs">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <title></title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/udes.ico" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" >    
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script>var indexPag=2</script>
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  <section id="container" >
+      <header class="header headerUnidad">
+        <center>
+          <div class="franjaAmarillaHeader">
+            <div class="franjaGrisHeader">Matemáticas</div>
+            <div class="textoFranjaHeader">Unidad 1:texto ejemplo</div>
+          </div>
+        </center>
+        <img src="assets/img/udes.svg" style="position:relative;float:left;top:-60px;">
+        <button class="buttonFooter" type="button" id="homeButton">           
+        </button>
+      </header>
+      <!--header end-->   
+      
+      <!-- Menu lateral izquierda-->
+      <div id="menu-container-unidad">
+        <div class="botonMenuLateral" id="botonMenuLateral"></div>             
+        <div id="menu-wrapper-unidad">
+          <div id="hamburger-menu-unidad"><span></span><span></span><span></span></div>
+          <div class="botonMenuLateralDevolver" id="botonMenuLateralDevolver"><i class="fa fa-caret-left fa-3x"></i></div>             
+          </div>
+          <ul class="menu-list-unidad accordion" id="ok">
+          </ul>
+      </div>
+      <!--sidebar end-->
+      
+      <!--main content start-->
+      <div id="cortinaIzquierda" style="display: none;"></div>
+      <div id="cortinaDerecha" style="display: none;"></div>
+      <section id="main-content-unidad">
+        <ul id="pantallasListaIndividual">
+        </ul>  
+      </section>    
+      
+      <!-- Ventana modal generica -->
+      <div class="modal fade" id="modalGenerica" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content-general">
+            <div class="modal-header-general">
+              <button type="button" class="close-general" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body-generica">
+              <div id="contenidoGeneral">
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Ventana modal calificaciones -->
+      <div class="modal fade" id="modalCalificacion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content-calificacion">
+            <div class="modal-header-calificacion">
+              <button type="button" class="close-calificacion" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body-generica">
+              <div id="contenidoGeneral"><br>
+                Asegúrese de primero responder y verificar su respuesta.
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ventana emergente Glosario-->            
+      <div class="modal fade" id="modalGlosario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header modalH">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Glosario</h4>
+            </div>
+            <div class="modal-body">
+              Haga clic en la letra inicial de la palabra buscada.
+              <table style="margin-top: 10px;margin-bottom:10px;width: 100%;background: #E3E3E3;color:#323232;"><tr><th><a href="#anclaA">A</a></th><th><a href="#anclaB">B</a></th><th><a href="#anclaC">C</a></th><th><a href="#anclaD">D</a></th><th><a href="#anclaE">E</a></th><th><a href="#anclaF">F</a></th><th><a href="#anclaG">G</a></th><th><a href="#anclaH">H</a></th><th><a href="#anclaI">I</a></th><th><a href="#anclaJ">J</a></th><th><a href="#anclaK">K</a></th><th><a href="#anclaL">L</a></th><th><a href="#anclaM">M</a></th><th><a href="#anclaN">N</a></th><th><a href="#anclaO">O</a></th><th><a href="#anclaP">P</a></th><th><a href="#anclaQ">Q</a></th><th><a href="#anclaR">R</a></th><th><a href="#anclaS">S</a></th><th><a href="#anclaT">T</a></th><th><a href="#anclaU">U</a></th><th><a href="#anclaV">V</a></th><th><a href="#anclaW">W</a></th><th><a href="#anclaX">X</a></th><th><a href="#anclaY">Y</a></th><th><a href="#anclaZ">Z</a></th></tr></table>
+              <div id="contenidoGlosario">
+              </div>  
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>              
+                              
+      <!--FOOTER Aplicación-->
+      <div id="relleno"></div>      
+      <footer class="footerUnidad">
+        <div class="footerControlsLeft">
+          <table>
+            <tr align="center">
+              <td>
+                <button class="buttonFooter" type="button" name="glosarioFooter" id="glosarioFooter">           
+                </button>          
+              </td>
+              <td>
+                <button class="buttonFooter conectado" type="button" name="volumenFooter" id="volumenFooter">           
+                </button>
+              </td>
+              <td>
+                <audio id="audioLabs" src="" type="audio/mp3" controls="controls" style="display: none" data-numero="0"></audio>
+                <button class="buttonFooter conectado" type="button" name="playFooter" id="playFooter">           
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="textoButtons">Glosario</span></td>
+              <td><span class="textoButtons">On/Off</span></td>
+              <td><span class="textoButtons">Play</span></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="footerControlsRight">
+          <button class="buttonFooter" type="button" id="izquierdaFooter">           
+          </button>
+          <span class="textoPags">Pág 1/20</span>
+
+          <button class="buttonFooter" type="button" id="derechaFooter">           
+          </button>
+        </div>
+
+        <center>
+          <div class="franjaAmarillaFooter">
+            <div class="progress" style="width: 30%;">
+              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+              </div>
+            </div>
+          </div>
+        </center>  
+      </footer>
+  </section>
+
+<script type="text/javascript" src="cordova.js"></script>        
+<script type="text/javascript" src="assets/js/jquery-1.8.3.min.js"></script>    
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/config/config.js"></script>
+<script type="text/javascript" src="assets/config/funciones.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+<script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="assets/js/common-scripts.js"></script>
+<script type="text/javascript" src="assets/js/jQueryRotateCompressed.2.2.js"></script>
+</body>
+</html>
